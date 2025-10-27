@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de CSS - CodeAcademy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <i class="fas fa-code"></i> CodeAcademy
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#languages">Tutoriales</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>Tutorial de CSS</h1>
+            <p>Estiliza tus páginas web con hojas de estilo en cascada.</p>
+        </div>
+    </header>
+    <main>
+        <section class="content">
+            <h2>¿Qué es CSS?</h2>
+            <p>CSS (Cascading Style Sheets) es un lenguaje de hojas de estilo utilizado para describir la presentación de un documento escrito en HTML. CSS describe cómo los elementos deben ser mostrados en pantalla, en papel, o en otros medios.</p>
+
+            <h3>Sintaxis Básica de CSS</h3>
+            <p>Una regla CSS consiste en un selector y un bloque de declaración. El selector apunta al elemento HTML que deseas estilizar, y el bloque de declaración contiene una o más declaraciones separadas por punto y coma. Cada declaración incluye una propiedad CSS y un valor, separados por dos puntos.</p>
+            <div class="code-editor">
+                <pre><span class="tag">p</span> {
+    <span class="attribute">color</span>: <span class="string">blue</span>;
+    <span class="attribute">font-size</span>: <span class="number">16px</span>;
+}</pre>
+            </div>
+
+            <h3>Selectores Comunes de CSS</h3>
+            <p>Los selectores se utilizan para "encontrar" (seleccionar) los elementos HTML a los que deseas aplicar un estilo.</p>
+            <ul>
+                <li>Selector de elemento: Selecciona elementos por su nombre (ej. <code>p</code>, <code>h1</code>).</li>
+                <li>Selector de ID: Selecciona un elemento con un ID específico (ej. <code>#miId</code>).</li>
+                <li>Selector de clase: Selecciona elementos con una clase específica (ej. <code>.miClase</code>).</li>
+                <li>Selector universal: Selecciona todos los elementos (ej. <code>*</code>).</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 CodeAcademy. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

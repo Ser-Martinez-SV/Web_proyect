@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de Java - Variables y Tipos de Datos - CodeAcademy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <i class="fas fa-code"></i> CodeAcademy
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#languages">Tutoriales</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>Java: Variables y Tipos de Datos</h1>
+            <p>Aprende a declarar y usar variables en Java.</p>
+        </div>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Variables en Java</h2>
+            <p>En Java, una variable es un contenedor que guarda un valor. Cada variable debe tener un tipo de dato que especifica el tamaño y el tipo de valores que puede almacenar.</p>
+
+            <h3>Declaración y Asignación</h3>
+            <p>Para declarar una variable, debes especificar su tipo y un nombre. Puedes asignarle un valor en el momento de la declaración o más tarde.</p>
+            <div class="code-editor">
+                <pre><span class="comment">// Declaración de variables</span>
+<span class="keyword">int</span> <span class="variable">numeroEntero</span>;
+<span class="keyword">String</span> <span class="variable">texto</span>;
+
+<span class="comment">// Asignación de valores</span>
+<span class="variable">numeroEntero</span> = <span class="number">10</span>;
+<span class="variable">texto</span> = <span class="string">"Hola Java"</span>;
+
+<span class="comment">// Declaración y asignación en una sola línea</span>
+<span class="keyword">double</span> <span class="variable">precio</span> = <span class="number">19.99</span>;
+<span class="keyword">boolean</span> <span class="variable">esVerdadero</span> = <span class="keyword">true</span>;</pre>
+            </div>
+
+            <h3>Tipos de Datos Primitivos</h3>
+            <p>Java tiene ocho tipos de datos primitivos:</p>
+            <ul>
+                <li><strong>byte:</strong> Números enteros pequeños (-128 a 127).</li>
+                <li><strong>short:</strong> Números enteros cortos (-32,768 a 32,767).</li>
+                <li><strong>int:</strong> Números enteros (el más común).</li>
+                <li><strong>long:</strong> Números enteros largos.</li>
+                <li><strong>float:</strong> Números de punto flotante de precisión simple.</li>
+                <li><strong>double:</strong> Números de punto flotante de precisión doble (el más común para decimales).</li>
+                <li><strong>boolean:</strong> Valores lógicos (<code>true</code> o <code>false</code>).</li>
+                <li><strong>char:</strong> Un solo carácter.</li>
+            </ul>
+
+            <h3>Tipos de Datos No Primitivos (Referencia)</h3>
+            <p>Los tipos de datos no primitivos se refieren a objetos y no tienen un valor predefinido. El más común es <code>String</code>.</p>
+            <div class="code-editor">
+                <pre><span class="keyword">String</span> <span class="variable">saludo</span> = <span class="string">"¡Bienvenido a CodeAcademy!"</span>;
+<span class="function">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">saludo</span>);</pre>
+            </div>
+        </section>
+        <div class="lesson-navigation">
+            <a href="java_tutorial.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Lección Anterior</a>
+            <a href="java_lessons.html" class="btn-primary">Todas las Lecciones de Java</a>
+            <!-- Añadir lección siguiente aquí cuando esté disponible -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 CodeAcademy. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

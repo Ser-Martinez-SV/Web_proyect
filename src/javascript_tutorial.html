@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de JavaScript - CodeAcademy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <i class="fas fa-code"></i> CodeAcademy
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#languages">Tutoriales</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>Tutorial de JavaScript</h1>
+            <p>Añade interactividad y dinamismo a tus páginas web.</p>
+        </div>
+    </header>
+    <main>
+        <section class="content">
+            <h2>¿Qué es JavaScript?</h2>
+            <p>JavaScript es un lenguaje de programación que permite implementar funciones complejas en páginas web. Cada vez que una página web hace algo más que simplemente mostrar información estática (mostrar actualizaciones de contenido a tiempo, mapas interactivos, gráficos animados 2D/3D, etc.), puedes apostar que JavaScript está involucrado.</p>
+
+            <h3>Variables y Tipos de Datos</h3>
+            <p>En JavaScript, puedes declarar variables usando <code>let</code>, <code>const</code> o <code>var</code>. Los tipos de datos incluyen números, cadenas de texto, booleanos, objetos, etc.</p>
+            <div class="code-editor">
+                <pre><span class="keyword">let</span> <span class="variable">nombre</span> = <span class="string">"Juan"</span>; <span class="comment">// Cadena de texto</span>
+<span class="keyword">const</span> <span class="variable">edad</span> = <span class="number">30</span>; <span class="comment">// Número</span>
+<span class="keyword">let</span> <span class="variable">esEstudiante</span> = <span class="keyword">true</span>; <span class="comment">// Booleano</span>
+
+<span class="function">console</span>.<span class="function">log</span>(<span class="variable">nombre</span>, <span class="variable">edad</span>, <span class="variable">esEstudiante</span>);</pre>
+            </div>
+
+            <h3>Funciones en JavaScript</h3>
+            <p>Las funciones son bloques de código diseñados para realizar una tarea particular. Una función se ejecuta cuando "algo" la invoca (la llama).</p>
+            <div class="code-editor">
+                <pre><span class="keyword">function</span> <span class="function">saludar</span>(<span class="variable">nombre</span>) {
+    <span class="function">console</span>.<span class="function">log</span>(<span class="string">"Hola, "</span> + <span class="variable">nombre</span> + <span class="string">"!"</span>);
+}
+
+<span class="function">saludar</span>(<span class="string">"María"</span>); <span class="comment">// Llama a la función</span></pre>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 CodeAcademy. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

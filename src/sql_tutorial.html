@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de SQL - CodeAcademy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <i class="fas fa-code"></i> CodeAcademy
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#languages">Tutoriales</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>Tutorial de SQL</h1>
+            <p>Aprende a gestionar y consultar bases de datos relacionales.</p>
+        </div>
+    </header>
+    <main>
+        <section class="content">
+            <h2>¿Qué es SQL?</h2>
+            <p>SQL (Structured Query Language) es un lenguaje estándar para gestionar y manipular bases de datos relacionales. Se utiliza para almacenar, recuperar, modificar y eliminar datos en una base de datos.</p>
+
+            <h3>Comandos Básicos de SQL</h3>
+            <p>Algunos de los comandos SQL más fundamentales incluyen:</p>
+            <ul>
+                <li><code>SELECT</code>: Extrae datos de una base de datos.</li>
+                <li><code>UPDATE</code>: Actualiza datos en una base de datos.</li>
+                <li><code>DELETE</code>: Elimina datos de una base de datos.</li>
+                <li><code>INSERT INTO</code>: Inserta nuevos datos en una base de datos.</li>
+                <li><code>CREATE DATABASE</code>: Crea una nueva base de datos.</li>
+                <li><code>ALTER DATABASE</code>: Modifica una base de datos.</li>
+                <li><code>CREATE TABLE</code>: Crea una nueva tabla.</li>
+                <li><code>ALTER TABLE</code>: Modifica una tabla.</li>
+                <li><code>DROP TABLE</code>: Elimina una tabla.</li>
+                <li><code>CREATE INDEX</code>: Crea un índice (clave de búsqueda).</li>
+                <li><code>DROP INDEX</code>: Elimina un índice.</li>
+            </ul>
+
+            <h3>Ejemplo de Consulta SELECT</h3>
+            <p>La sentencia <code>SELECT</code> se utiliza para seleccionar datos de una base de datos. Los datos devueltos se almacenan en una tabla de resultados, llamada conjunto de resultados.</p>
+            <div class="code-editor">
+                <pre><span class="keyword">SELECT</span> <span class="variable">nombre</span>, <span class="variable">email</span>
+<span class="keyword">FROM</span> <span class="variable">Usuarios</span>
+<span class="keyword">WHERE</span> <span class="variable">edad</span> > <span class="number">18</span>;</pre>
+            </div>
+
+            <h3>Ejemplo de Inserción de Datos</h3>
+            <p>La sentencia <code>INSERT INTO</code> se utiliza para añadir nuevos registros a una tabla en una base de datos.</p>
+            <div class="code-editor">
+                <pre><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="variable">Productos</span> (<span class="variable">nombre</span>, <span class="variable">precio</span>)
+<span class="keyword">VALUES</span> (<span class="string">'Laptop'</span>, <span class="number">1200.00</span>);</pre>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 CodeAcademy. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
