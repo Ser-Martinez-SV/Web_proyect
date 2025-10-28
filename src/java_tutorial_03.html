@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de Java - Variables y Tipos de Datos - CodeAcademy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#languages">Tutoriales</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>Java: Operadores</h1>
+            <p>Aprende a utilizar todos los operadores lógicos.</p>
+        </div>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Operadores en Java</h2>
+            <p>En Java existen diferentes tipos de operadores, simbolo o secuencias que podemos utilizar para realizar operaciones con diferentes tipos de datos y/o variables.</p>
+            
+            <h3>Operadores Aritméticos</h3>
+            <p>Los operadores aritméticos son aquellos que utilizamos para realizar operaciones matemáticas, con variables o datos numéricos.</p>
+        
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">int</span> <span class="variable">a</span> = <span class="number">5</span>;
+        <span class="keyword">int</span> <span class="variable">b</span> = <span class="number">3</span>;
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span> + <span class="variable">b</span>);<span class="comment">//Suma</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span> - <span class="variable">b</span>);<span class="comment">//Resta</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span> * <span class="variable">b</span>);<span class="comment">//Multipliucación</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span> / <span class="variable">b</span>);<span class="comment">//División</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span> % <span class="variable">b</span>);<span class="comment">//Resto de una División</span>
+    }
+}</pre>
+            </div>
+
+            <h3>Operadores de Asignación</h3>
+            <p>Son los operadores que utilizamos para asignar valores a variables. Que también podemos utilizar para cambiar el valor de una variable de cierta forma. Realizar una operación con su mismo valor y guardarlo de nuevo en la variable.</p>
+        
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">int</span> <span class="variable">a</span> = <span class="number">5</span>;
+        <span class="keyword">int</span> <span class="variable">b</span> = <span class="number">3</span>;
+        
+        <span class="variable">a</span> = <span class="variable">b</span>;
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span>);
+        
+        <span class="variable">a</span> += <span class="number">1</span>; <span class="comment">// a = a + 1</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span>);
+        
+        <span class="variable">a</span> -= <span class="number">1</span>; <span class="comment">// a = a - 1</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span>);
+        
+        <span class="variable">a</span> *= <span class="number">2</span>; <span class="comment">// a = a * 2</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span>);
+        
+        <span class="variable">a</span> /= <span class="number">2</span>; <span class="comment">// a = a / 2</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span>);
+        
+        <span class="variable">a</span> %= <span class="number">2</span>; <span class="comment">// a = a % 2</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span>);
+    }
+}</pre>
+            </div>
+
+            <h3>Operadores de Comparación</h3>
+            <p>En Java tenemos un tipo de operadores que nos sirven para comparar variables o algunos tipos de datos (numéricos y caracteres) y devolver un valor boleano.</p>
+    
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">int</span> <span class="variable">a</span> = <span class="number">5</span>;
+        <span class="keyword">int</span> <span class="variable">b</span> = <span class="number">3</span>;
+        
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span> == <span class="variable">b</span>);<span class="comment">//Igual que</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span> != <span class="variable">b</span>);<span class="comment">//Diferente que</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span> > <span class="variable">b</span>);<span class="comment">//Mayor que</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span> >= <span class="variable">b</span>);<span class="comment">//Mayor igual que</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span> < <span class="variable">b</span>);<span class="comment">//Menor que</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">a</span> <= <span class="variable">b</span>);<span class="comment">//Menor igual que</span>
+    }
+}</pre>
+            </div>
+
+            <h3>Operadores Lógicos</h3>
+            <p>Otro tipo de operadores son los operadores lógicos los cuales nos sirven para tomar decisiones en función de vario valores booleanos. AND (&&) el cual devuelve true solo si los dos valores son true, OR (||) el cual devulve true cuando uno de los dos valores es verdadero y NOT (!) el cual cambia al valor contrario. Además de comparar valores boleanos solo podemos también hacer operaciones lógicas complejas.</p>
+            
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">int</span> <span class="variable">a</span> = <span class="number">5</span>;
+        <span class="keyword">int</span> <span class="variable">b</span> = <span class="number">3</span>;
+        
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="keyword">true</span> && <span class="keyword">true</span>);
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="keyword">true</span> && <span class="keyword">false</span>);
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="keyword">false</span> && <span class="keyword">false</span>);
+
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="number">3</span> > <span class="number">2</span> && <span class="number">5</span> == <span class="number">2</span>);
+
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="keyword">true</span> || <span class="keyword">true</span>);
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="keyword">true</span> || <span class="keyword">false</span>);
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="keyword">false</span> || <span class="keyword">false</span>);
+
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="number">3</span> > <span class="number">2</span> || <span class="number">5</span> == <span class="number">2</span>);
+
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(!<span class="keyword">true</span>);
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(!<span class="keyword">false</span>);
+
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(!(<span class="number">3</span> > <span class="number">2</span>) || <span class="number">5</span> == <span class="number">2</span>);
+    }
+}</pre>
+            </div>
+
+            <h3>Operadores Unarios</h3>
+            <p>Los últimos operadores que tenemos en Java son los Unarios. Son aquellos que utilizamos para incrementar o decrementar valores. Dependiendo de donde pongamos el operador se realizara el incremento antes o despues. </p>
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">int</span> <span class="variable">a</span> = <span class="number">5</span>;
+        <span class="keyword">int</span> <span class="variable">b</span> = <span class="number">3</span>;
+        
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(++<span class="variable">b</span>);<span class="comment">//Suma 1 y luego imprime</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">b</span>++);<span class="comment">//Imprime primero y luego suma 1</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">b</span>);
+        
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(--<span class="variable">b</span>);<span class="comment">//Resta 1 y luego imprime</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">b</span>--);<span class="comment">//Imprime primero y luego resta 1</span>
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">b</span>);
+    }
+}</pre>
+            </div>
+
+
+        </section>
+        <div class="lesson-navigation">
+            <a href="java_tutorial_02.html" class="btn-primary"><i class="fas fa-arrow-left"></i> Lección Anterior</a>
+            <a href="java_lessons.html" class="btn-primary">Todas las Lecciones de Java</a>
+            <a href="java_tutorial_04.html" class="btn-primary">Siguiente Lección <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 CodeAcademy. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -10,9 +10,7 @@
 <body>
     <header>
         <div class="header-top">
-            <div class="logo">
-                <i class="fas fa-code"></i> CodeAcademy
-            </div>
+            
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -33,38 +31,39 @@
             <h3>Primer Programa en Java: "Hola Mundo"</h3>
             <p>El clásico programa "Hola Mundo" es el punto de partida para cualquier lenguaje de programación.</p>
             <div class="code-editor">
-                <pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">HelloWorld</span> {
+                <pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="function">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="string">"Hola Mundo!"</span>);
+    }
+}</pre>
+            </div>
+            <h3>Explicación Primer Programa </h3>
+            <p>Todo programa de Java tiene la misma estructura. Empieza con una clase <code>Main</code> y dentro de estra una función principal <code>main</code> también. Cuando ejecutamos un programa de Java el compilador llama a la clase <code>Main</code> y esta llama a su función principal (<code>main</code>) y entonces se ejecuta nuestro código.</p>
+            <div class="code-editor">
+                <pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function"><Main></Main></span> {
     <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
         <span class="function">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="string">"Hola Mundo!"</span>);
     }
 }</pre>
             </div>
 
-            <h3>Variables y Tipos de Datos en Java</h3>
-            <p>Java es un lenguaje fuertemente tipado, lo que significa que todas las variables deben ser declaradas con un tipo de dato específico antes de ser utilizadas.</p>
-            <ul>
+            <h3>Comentarios</h3>
+            <p>En Java como en todo lenguaje existen partes del código que no se ejecutan, que son simplemente indicaciones para nosotros mismos o para los otros programadores que esten utilizando nuestor código. Tenemos 2 tipos de comentarios, comentarios en una línea y comentarios en
+                //varias líneas. </p>
+            <!--<ul>
                 <li><code>int</code>: Números enteros.</li>
                 <li><code>double</code>: Números de punto flotante.</li>
                 <li><code>boolean</code>: Valores verdadero/falso.</li>
                 <li><code>String</code>: Cadenas de texto (es una clase, no un tipo primitivo).</li>
-            </ul>
+            </ul>-->
             <div class="code-editor">
-                <pre><span class="keyword">int</span> <span class="variable">edad</span> = <span class="number">25</span>;
-<span class="keyword">double</span> <span class="variable">precio</span> = <span class="number">99.99</span>;
-<span class="keyword">boolean</span> <span class="variable">activo</span> = <span class="keyword">true</span>;
-<span class="keyword">String</span> <span class="variable">mensaje</span> = <span class="string">"Bienvenido"</span>;</pre>
+                <pre><span class="comment">//Esto es un comenmtario en una línea</span>
+<span class="comment">/*Esto es un 
+comentarios en varias
+líneas*/</span></pre>
             </div>
+            
         </section>
-        <div class="code-editor">
-<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
-    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">arg</span>) {
-        <span class="keyword">var</span> <span class="variable">email</span> = <span class="string">"pepelopez@gmail.com"</span>;
-        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">email</span>);
-        <span class="keyword">var</span> <span class="variable">año</span> = <span class="number">2025</span>;
-        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">año</span>);
-    }
-}</pre>
-</div>
         <div class="lesson-navigation">
             <a href="java_lessons.html" class="btn-primary"><i class="fas fa-arrow-left"></i> Todas las Lecciones de Java</a>
             <a href="java_tutorial_02.html" class="btn-primary">Siguiente Lección <i class="fas fa-arrow-right"></i></a>

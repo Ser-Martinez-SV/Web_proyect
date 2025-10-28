@@ -10,9 +10,7 @@
 <body>
     <header>
         <div class="header-top">
-            <div class="logo">
-                <i class="fas fa-code"></i> CodeAcademy
-            </div>
+
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -29,47 +27,86 @@
         <section class="content">
             <h2>Variables en Java</h2>
             <p>En Java, una variable es un contenedor que guarda un valor. Cada variable debe tener un tipo de dato que especifica el tamaño y el tipo de valores que puede almacenar.</p>
-
-            <h3>Declaración y Asignación</h3>
-            <p>Para declarar una variable, debes especificar su tipo y un nombre. Puedes asignarle un valor en el momento de la declaración o más tarde.</p>
+            <p>Además de las variables aprenderemos los tipos de datos que pueden contener estas variables. 
+                <br>Para declarar una variable primero debemos indicar el tipo de dato, luego el nombre y el valor. Empecemos viendo los tipos de datos primitivos.
+            </p>
+            <h3>Variables numéricas</h3>
+            <p>Para guardar numeros enteros contamos con 4 tipos de variable, segun la cantidad de momeoria que ocupan, es decir, que tan grande puede ser el número que guardamos ahí.
+                 [<code>byte</code> (-127, 127), <code>short</code> (-32k, 32k), <code>int</code> (-2B, 2B), <code>long</code> (-2^61, 2^61)]. Es cierto que el más comun es <code>int</code>.</p>
+                 <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">arg</span>) {
+        <span class="keyword">byte</span> <span class="variable">edad</span> = <span class="number">13</span>;
+        <span class="keyword">short</span> <span class="variable">num</span> = <span class="number">12455</span>;
+        <span class="comment">//Podemos separar numeros grandes con barras bajas, sin que afecte en nada.</span>
+        <span class="keyword">int</span> <span class="variable">millones</span> = <span class="number">123_456_789</span>; 
+        <span class="comment">//Inportantre la "L" final en estos numeros</span>
+        <span class="keyword">long</span> <span class="variable">trillones</span> = <span class="number">123_334_253_454L</span>;
+        <span class="comment">//Podemos modificar el valor de una variable simplemente escribiendo su nombre y nuevo valor.</span>
+        <span class="variable">num</span> = <span class="number">34</span>;
+    }
+}</pre>
+                    </div>
+            <p>Dos maneras de guardar numeros con decimales son con los tipos de datos <code>float</code> y <code>double</code>. Siendo <code>double</code> capaz de guardar números más grandes que <code>float</code>. Y para definir <code>float</code> debemos poner una f al final del número, se recomienda que sea mayúscula, para diferenciarlo mejor del número en sí.</p>
             <div class="code-editor">
-                <pre><span class="comment">// Declaración de variables</span>
-<span class="keyword">int</span> <span class="variable">numeroEntero</span>;
-<span class="keyword">String</span> <span class="variable">texto</span>;
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">arg</span>) {
+        <span class="keyword">float</span> <span class="variable">decimal</span> = <span class="number">1.33F</span>; 
+        <span class="keyword">double</span> <span class="variable">precio</span> = <span class="number">2134.5478</span>;
+    }
+}</pre>
+                </div>
 
-<span class="comment">// Asignación de valores</span>
-<span class="variable">numeroEntero</span> = <span class="number">10</span>;
-<span class="variable">texto</span> = <span class="string">"Hola Java"</span>;
+            <h3>Variables Booleanas </h3>
+            <p>Tambien tenemos el tipo de datos booleano, estas varaibles booleanas que pueden contener <code>true</code> o <code>false</code> (verdadero o falso)las cuales nos serán muy utiles más adelante para comprobar condiciones de estructuras de control.:</p>
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">arg</span>) {
+        <span class="keyword">boolean</span> <span class="variable">encendido</span> = <span class="keyword">true</span>;  
+        <span class="keyword">boolean</span> <span class="variable">abierto</span> = <span class="keyword">false</span>;  
+    }
+}</pre>
+                </div>
 
-<span class="comment">// Declaración y asignación en una sola línea</span>
-<span class="keyword">double</span> <span class="variable">precio</span> = <span class="number">19.99</span>;
-<span class="keyword">boolean</span> <span class="variable">esVerdadero</span> = <span class="keyword">true</span>;</pre>
+            <h3>Variables de Texto</h3>
+            <p>Otro tipo son las cadenas de texto o <code>String</code>. Pueden estar entre comillas dobles o simples o incluso triples. Cuando utilizamos comillas triples podremos utilizar comillas dobles dentro de este.</p>
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">arg</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> = <span class="string">"Hello Poyo"</span>;    
+        <span class="keyword">String</span> <span class="variable">frase</span> = <span class="string">"Al pan pan y al vino vino"</span>; 
+        <span class="keyword">String</span> <span class="variable">comillas_triples</span> = <span class="string">"""Angel dijo: "Hugo, vete de clase". Y hugo se fue."""</span>;    
+    }
+}</pre>
+                </div>
+
+            <h3>Variables de Caracteres</h3>
+            <p>Un tipo de datos similar al de texto pero donde solo podemos guardar un único caracter (letra, numero, simbolo...). Siempre indicando su valor entre comillas simples.</p>
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">arg</span>) {
+        <span class="keyword">char</span> <span class="variable">letra</span> = <span class="string">'A'</span>; 
+        <span class="keyword">char</span> <span class="variable">simbolo</span> = <span class="string">'-'</span>;      
+    }
+}</pre>
             </div>
 
-            <h3>Tipos de Datos Primitivos</h3>
-            <p>Java tiene ocho tipos de datos primitivos:</p>
-            <ul>
-                <li><strong>byte:</strong> Números enteros pequeños (-128 a 127).</li>
-                <li><strong>short:</strong> Números enteros cortos (-32,768 a 32,767).</li>
-                <li><strong>int:</strong> Números enteros (el más común).</li>
-                <li><strong>long:</strong> Números enteros largos.</li>
-                <li><strong>float:</strong> Números de punto flotante de precisión simple.</li>
-                <li><strong>double:</strong> Números de punto flotante de precisión doble (el más común para decimales).</li>
-                <li><strong>boolean:</strong> Valores lógicos (<code>true</code> o <code>false</code>).</li>
-                <li><strong>char:</strong> Un solo carácter.</li>
-            </ul>
-
-            <h3>Tipos de Datos No Primitivos (Referencia)</h3>
-            <p>Los tipos de datos no primitivos se refieren a objetos y no tienen un valor predefinido. El más común es <code>String</code>.</p>
+            <h3>Constantes y Errores</h3>
+            <p>Para terminar tenemos un concepto que aplica a todas las variables que utilizamos queremos que se mantengan con el valor inicial todo el código. A estas variables se les llaman constantes o finales. Y se declaran simplemente escribiendo <code>final</code> antes de su declaración normal. Su valor no podrá ser cambiado.</p>
             <div class="code-editor">
-                <pre><span class="keyword">String</span> <span class="variable">saludo</span> = <span class="string">"¡Bienvenido a CodeAcademy!"</span>;
-<span class="function">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">saludo</span>);</pre>
-            </div>
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">arg</span>) {
+        <span class="keyword">final</span> <span class="keyword">float</span> <span class="variable">PI</span> = <span class="number">3.14F</span>;
+        <span class="keyword">final</span> <span class="keyword">String</span> <span class="variable">MI_NOMBRE</span> = <span class="string">"Sergio"</span>; 
+        <span class="keyword">final</span> <span class="keyword">char</span> <span class="variable">LETRA_A</span> = <span class="string">'A'</span>;
+    }
+}</pre>
+                </div>
         </section>
         <div class="lesson-navigation">
-            <a href="java_tutorial.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Lección Anterior</a>
+            <a href="java_tutorial.html" class="btn-primary"><i class="fas fa-arrow-left"></i> Lección Anterior</a>
             <a href="java_lessons.html" class="btn-primary">Todas las Lecciones de Java</a>
-            <!-- Añadir lección siguiente aquí cuando esté disponible -->
+            <a href="java_tutorial_02.html" class="btn-primary">Siguiente Lección <i class="fas fa-arrow-right"></i></a>
         </div>
     </main>
     <footer>
