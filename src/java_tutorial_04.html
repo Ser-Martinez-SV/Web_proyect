@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de Java - Variables y Tipos de Datos - CodeAcademy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#languages">Tutoriales</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>Java: Strings</h1>
+            <p>Las strings son uno de los tipos de datos más usados en Java, por lo que es indispensable saber utilizarlas correctamente.</p>
+        </div>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Strings</h2>
+            <p>Las cadenas de texto en Java tiene comportamientos diferentes al resto de tipos de datos, además de muchas funciones que aprenderemos a utilizar en esta lección.</p>
+            
+            <h3>Concatenación</h3>
+            <p>Un comportamiento muy comun que vamos a utilizar a menudo es la concatenación de cadenas de text, es muy sencilla, utilizamos el operador <code>+</code>. Podemos concatenar con otros tipos de datos como numeros con el mismo operador. No obstante tenemos una función para concatenar strings.</p>
+        
+            
+
+            <h3>.length()</h3>
+            <p>Esta función nos devuelve la longiud de la cadena de texto indicada enteriormente.</p>
+        
+            
+
+            <h3>.charAt(n) .indexOf(str)</h3>
+            <p>charAt(n), devuelve el caracter de la posición n. Debemos tener en cuenta que la primera posición es la 0 y que si no encuentra el caracter en el string devolvera -1.</p>
+            <p>indexOf(str), nos deveulve la posición de dicho str. Si buscas un str que no esta devolvera -1. También podemos indicar desde que cadena queremos que empiece a buscar.</p>
+            <p>lastIndexOf(str), es una variante de indexOf pero que devuelve la posición de la ultima aparicion de ese str.</p>
+    
+            
+
+            <h3>.substring(n, m)</h3>
+            <p>Devuelve una subcadena desde la primera posición indicada a la ultima, de n a m.</p>
+            
+            
+
+            <h3>.equals(str)</h3>
+            <p>Sirve para compara dos str, en Java no podemos comparar strings con ==, debemos hacerlo así. Devuelve un valor booleano.</p>
+            <p>Existe una variante que es .equalsIgnoreCase(str) la cual funciona igual solo que no tiene en cuenta mayúsculas ni minúsculas.</p>
+            
+
+            <h3>.replaceAll(str1, str2)</h3>
+            <p>Remplaza todos los primeros str indicados por los segundos. No modifica la str original, devuelve un str nuevo.</p>
+            
+
+            <h3>.replaceAll(str1, str2)</h3>
+            <p>Remplaza todos los primeros str indicados por los segundos. No modifica la str original, devuelve un str nuevo.</p>
+            
+
+
+        </section>
+        <div class="lesson-navigation">
+            <a href="java_tutorial_03.html" class="btn-primary"><i class="fas fa-arrow-left"></i> Lección Anterior</a>
+            <a href="java_lessons.html" class="btn-primary">Todas las Lecciones de Java</a>
+            <a href="java_tutorial_05.html" class="btn-primary">Siguiente Lección <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 CodeAcademy. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
