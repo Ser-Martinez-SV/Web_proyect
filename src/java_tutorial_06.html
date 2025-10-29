@@ -64,38 +64,94 @@
     }
 }</pre>
             </div>
-
             
-            <p>¿Y si queremos definir una variable en función de una condición pero darle un valor que no sea booleano?</p>
-            <p>En Java podemos hacerlo, simplemete deberemos seguir la estructura a continuación y darle un valor string, int o el que queramos. Estos trucos de Java hacen el código más limpio y corto.</p>
-
+            <h3>Arrays.toString(array)</h3>
+            <p>En Java existe una librería muy comun que se llama Arrays y nos permite realizar diferentes funciones con arrays. Simplemente debemos importarla como vemos en el ejemplo y una función muy útil es <strong>Arrays.toString(array)</strong> la cual nos permite imprimir arrays por consola.</p>            
             <div class="code-editor">
-<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+<pre><span class="keyword">import</span> <span class="class">java</span>.<span class="class">util</span>.<span class="class">Arrays</span>;
+<span class="keyword">class</span> <span class="function">Main</span> {
     <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
-        <span class="keyword">int</span> <span class="variable">salario</span> = <span class="number">120_000</span>;    
-        <span class="keyword">String</span> <span class="variable">clase</span> = <span class="variable">salario</span> > <span class="number">100_000</span> ? <span class="string">"Clase alta"</span> : <span class="string">"Clase media"</span>;
+        <span class="keyword">int</span>[] <span class="variable">numeros</span> = {<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>};
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="class">Arrays</span>.<span class="function">toString</span>(<span class="variable">numeros</span>));
+        <span class="comment">//Salida: [2,3,4,5,6]</span>
+    }
+}</pre>
+            </div>
+
+            <h3>Arrays.sort(array)</h3>
+            <p>Dentro de esta misma librería tenemos otra función muy útil, la cual nos permite ordenar arrays de manera ascendente.</p> 
+            <div class="code-editor">
+<pre><span class="keyword">import</span> <span class="class">java</span>.<span class="class">util</span>.<span class="class">Arrays</span>;
+<span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">int</span>[] <span class="variable">numeritos</span> = {<span class="number">9</span>,<span class="number">7</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">6</span>};
+        <span class="class">Arrays</span>.<span class="function">sort</span>(<span class="variable">numeritos</span>);
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="class">Arrays</span>.<span class="function">toString</span>(<span class="variable">numeritos</span>));
+        <span class="comment">//Salida: [2,4,6,7,9]</span>
+    }
+}</pre>
+            </div>
+           
+            <h3>Arrays.equals(array1, array2)</h3>
+            <p>Al igual que pasa con las strings, no podemos comparar dos arrays con el operador <code>==</code> si no que tenemos que utilizar una función de esta librería, la cual devuelve <code>true</code> solo si todas las posiciones de los arrays coinciden.</p>            
+            <div class="code-editor">
+<pre><span class="keyword">import</span> <span class="class">java</span>.<span class="class">util</span>.<span class="class">Arrays</span>;
+<span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">int</span>[] <span class="variable">numeros</span> = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];
+        <span class="keyword">int</span>[] <span class="variable">numeritos</span> = {<span class="number">9</span>,<span class="number">7</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">6</span>};
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="class">Arrays</span>.<span class="function">equals</span>(<span class="variable">numeros</span>, <span class="variable">numeritos</span>));
+        <span class="comment">//Salida: false</span>
+    }
+}</pre>
+            </div>
+
+            <h3>Arrays.fill(array, value)</h3>
+            <p>Por último tenemos una función que nos permite rellenar un array con un mismo valor en todos sus índices.</p>
+            <div class="code-editor">
+<pre><span class="keyword">import</span> <span class="class">java</span>.<span class="class">util</span>.<span class="class">Arrays</span>;
+<span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">int</span>[] <span class="variable">numeros</span> = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];
+        <span class="class">Arrays</span>.<span class="function">fill</span>(<span class="variable">numeros</span>, <span class="number">24</span>);
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="class">Arrays</span>.<span class="function">toString</span>(<span class="variable">numeros</span>));
+        <span class="comment">//Salida: [24,24,24,24,24]</span>
     }
 }</pre>
             </div>
             
-            <h3>Switch</h3>
-            <p>Además de <code>if else</code> Java cuenta con otra estructura de control, switch (Según). Si dada una condición tenemos muchas posibilidades sería muy costos y óptimo hacer muchos <code>else if</code>, esta estructura de control nos permite en base a una variable realizar diferentes acciones según su valor. </p>
-            
+            <h3>Matrices</h3>
+            <p>Un tipo más complejo de arrays son las matrices, que no son más que arrays de 2 dimensiones, que utilizan 2 índices. Lo podemos entender también como si fuera una lista de listas y que el primer índice indica a que lista nos referimos y el segundo a que valor de la lista.</p>
+            <p>Para declararlas utilizamos las mismas estructuras que los arrays pero con dos <code>[]</code>. Y para acceder a los valores igual, indicamos los 2 índices del valor entre dos diferentes <code>[ ]</code>.</p>
+
             <div class="code-editor">
-<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+<pre><span class="keyword">import</span> <span class="class">java</span>.<span class="class">util</span>.<span class="class">Arrays</span>;
+<span class="keyword">class</span> <span class="function">Main</span> {
     <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
-        <span class="keyword">String</span> <span class="variable">rol</span> = <span class="string">"admin"</span>;
-        <span class="keyword">switch</span> (<span class="variable">rol</span>){<span class="comment">//También se puede hacer con variables númericas</span>
-            <span class="keyword">case</span> <span class="string">"admin"</span>:
-                <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="string">"Eres admin"</span>);
-                <span class="keyword">break</span>; <span class="comment">//Muy importante añadir el break para que termine el switch y no siga comprobando</span>
-            <span class="keyword">case</span> <span class="string">"moderador"</span>:
-                <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="string">"Eres moderador"</span>);
-                <span class="keyword">break</span>;
-            <span class="keyword">default</span>:<span class="comment">//Es el valor por defecto, en el caso no coincidir con ninguno de los anteriores</span>
-                <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="string">"Eres un usuario normal."</span>);
-                <span class="keyword">break</span>;
-        }
+        <span class="keyword">int</span> [][] <span class="variable">matriz2x3</span> = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>][<span class="number">3</span>]; 
+        <span class="keyword">int</span>[][] <span class="variable">matriz</span> = {
+            {<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>},
+            {<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>},
+            {<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>}
+        };<span class="comment">//Podemos declararla en una sola linea, pero hecho así se ve más claro</span>
+        <span class="variable">matriz</span>[<span class="number">2</span>][<span class="number">2</span>] = <span class="number">0</span>;
+    }
+}</pre>
+            </div>
+
+            <h3>Arrays.deepToString(matriz)</h3>
+            <p>Al igual que con los arrays normales hay algunas funciones de la librería de Arrays que podemos utilizar, en este caso podemos imprimirlas por consola.</p>
+            <div class="code-editor">
+<pre><span class="keyword">import</span> <span class="class">java</span>.<span class="class">util</span>.<span class="class">Arrays</span>;
+<span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">int</span>[][] <span class="variable">matriz</span> = {
+            {<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>},
+            {<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>},
+            {<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>}
+        };
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="class">Arrays</span>.<span class="function">deepToString</span>(<span class="variable">matriz</span>));
+        <span class="comment">//Salida: [[1, 2, 3], [3, 5, 6], [7, 8, 9]]</span>
     }
 }</pre>
             </div>
