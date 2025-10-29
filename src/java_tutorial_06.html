@@ -19,65 +19,52 @@
             </nav>
         </div>
         <div class="hero-content">
-            <h1>Java: Condiciones</h1>
-            <p>Controla las diferentes estructuras de control y condiciones de Java.</p>
+            <h1>Java: Arrays</h1>
+            <p>Los Arrays, uno de los tipos de datos más utilizados en Java.</p>
         </div>
     </header>
     <main>
         <section class="content">
-            <h2>Estructuras de Control</h2>
-            <p>Como en todo lenguaje de programación tenemos condicionales, partes de codigo donde se hace una comprobación para seguir un camino u otro. Esto añade lógica y complejidad a nuestro código.</p>
-
-            <h3>If Else</h3>
-            <p>Con <code>if</code> junto a una condición podemos ejecutar o no una parte de código. Con <code>else</code> lo que haremos será ejecutar indicar que parte de código se ejecutara si la condición del <code>if</code> no se cumple. Además no no existe <code>elif</code> como en python por ejemplo. Para ello se utiliza else seguido de if (<code>else if (){}</code> ). Cabe recalcar que la condición puede contener diferentes operadores lógicos, variables, datos y demás. </p>
-            <div class="code-editor">
-<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
-    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
-        <span class="keyword">int</span> <span class="variable">temp</span> = <span class="number">20</span>;
-        <span class="keyword">if</span> (<span class="variable">temp</span> > <span class="number">30</span>){
-            <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="string">"It's a hot day"</span>);
-        }<span class="keyword">else if</span> (<span class="variable">temp</span> > <span class="number">20</span>){
-            <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="string">"Beautifull day"</span>);
-        }<span class="keyword">else</span> { 
-            <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="string">"Cold day"</span>);
-        }
-    }
-}</pre>
-            </div>
-
-            <h3>Variables entre Llaves</h3>
-            <p>Antes de continuar debemos tener en cuenta una cosa. Las variables solo existen entre la llave de apartura superior y la que cierra a esta, por lo que si definimos una variable dentro de un bloque <code>if</code> o <code>else</code> esta no será accesible desde fuera.</p>
-
-            <div class="code-editor">
-<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
-    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
-        <span class="keyword">if</span>(<span class="keyword">true</span>){
-            <span class="keyword">int</span> <span class="variable">h</span> = <span class="number">0</span>;
-        }
-        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">h</span>); <span class="comment">//ERROR</span>
-    }
-}</pre>
-            </div>
-
-
-            <h3>Definición de Variables</h3>
-            <p>En muchas ocasiones podemos querer definir una variable en función de una condición, y lo que se nos ocurre es crear un bloque <code>if else</code> pero en Java para definir una variable booleana simplemente podemos indicar la expresión dentro de la misma y esta guardara <code>true</code> o <code>false</code> en función de la misma.</p>
+            <h2>Listas, Arrays y Matrices</h2>
+            <p>Son uno de los tipos de datos más utilizados en todo lenguaje de programación, en Java tienen sus cualidades y funciones, vamos a verlos.</p>
             
+            <h3>Definición de Arrays (Listas)</h3>
+            <p>Los Arrays son secuencias de un solo tipo de dato ordenadas por indices empenzando en 0. Para definirlos tenemos dos formas, indicar su longitud o indicar todos sus valores. Debemos especificar el tipo de dato junto a un par de <code>[ ]</code>.</p>
             <div class="code-editor">
-<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+<pre><span class="keyword">class</span> <span class="function">Main</span> {
     <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
-        <span class="comment">//No</span>
-        <span class="keyword">int</span> <span class="variable">salario</span> = <span class="number">120_000</span>;
-        <span class="keyword">boolean</span> <span class="variable">buenSalario</span> = <span class="keyword">false</span>;
-        <span class="keyword">if</span> (<span class="variable">salario</span> > <span class="number">100_000</span>){
-            <span class="variable">buenSalario</span> = <span class="keyword">true</span>;
-        }
-        <span class="comment">//Si</span>
-        <span class="keyword">int</span> <span class="variable">salario</span> = <span class="number">120_000</span>;
-        <span class="keyword">boolean</span> <span class="variable">buenSalario</span> = (<span class="variable">salario</span> > <span class="number">100_000</span>);
+        <span class="keyword">int</span>[] <span class="variable">numeros</span> = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];
+        <span class="keyword">double</span>[] <span class="variable">decimales</span> = <span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">5</span>];
+        <span class="keyword">String</span>[] <span class="variable">nombres</span> = {<span class="string">"Pepe"</span>, <span class="string">"Ana"</span>,<span class="string">"Juan"</span>};
+        <span class="keyword">int</span>[] <span class="variable">numeritos</span> = {<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>};
     }
 }</pre>
             </div>
+
+            <h3>Acceso a Datos</h3>
+            <p>Como he indicado anteriormete los elementos de un array estan ordenados por índices, siendo el primero 0, por lo que para acceder a un dato, para utilizarlo o cambiar su valor, deberemos indicar el nombre de la variable junto a el índice entre <code>[ ]</code>.</p>
+            <div class="code-editor">
+<pre><span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">int</span>[] <span class="variable">numeros</span> = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];
+        <span class="variable">numeros</span>[<span class="number">0</span>] = <span class="number">1</span>;
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">numeros</span>[<span class="number">0</span>]);
+    }
+}</pre>
+            </div>
+
+
+            <h3>.length</h3>
+            <p><strong>.length</strong> en una método de los arrays que nos devuelve la longitud del mismo. Similar al <code>.length()</code> de los strings pero sin ( ).</p>            
+            <div class="code-editor">
+<pre><span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">int</span>[] <span class="variable">numeros</span> = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">numeros</span>.<span class="variable">length</span>);<span class="comment">//5</span>
+    }
+}</pre>
+            </div>
+
             
             <p>¿Y si queremos definir una variable en función de una condición pero darle un valor que no sea booleano?</p>
             <p>En Java podemos hacerlo, simplemete deberemos seguir la estructura a continuación y darle un valor string, int o el que queramos. Estos trucos de Java hacen el código más limpio y corto.</p>
@@ -116,9 +103,9 @@
 
         </section>
         <div class="lesson-navigation">
-            <a href="java_tutorial_04.html" class="btn-primary"><i class="fas fa-arrow-left"></i> Lección Anterior</a>
+            <a href="java_tutorial_05.html" class="btn-primary"><i class="fas fa-arrow-left"></i> Lección Anterior</a>
             <a href="java_lessons.html" class="btn-primary">Todas las Lecciones de Java</a>
-            <a href="java_tutorial_06.html" class="btn-primary">Siguiente Lección <i class="fas fa-arrow-right"></i></a>
+            <a href="java_tutorial_07.html" class="btn-primary">Siguiente Lección <i class="fas fa-arrow-right"></i></a>
         </div>
     </main>
     <footer>
