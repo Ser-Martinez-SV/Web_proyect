@@ -31,38 +31,221 @@
             <h3>Concatenación</h3>
             <p>Un comportamiento muy comun que vamos a utilizar a menudo es la concatenación de cadenas de text, es muy sencilla, utilizamos el operador <code>+</code>. Podemos concatenar con otros tipos de datos como numeros con el mismo operador. No obstante tenemos una función para concatenar strings.</p>
         
-            
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">"Hello wordl"</span>;
+        <span class="variable">texto</span> = <span class="variable">texto</span> + <span class="string">"!!"</span>;
+        <span class="variable">texto</span> = <span class="variable">texto</span> + <span class="string">" "</span> + <span class="number">34</span>;
+        <span class="variable">texto</span>.<span class="function">concat</span>(<span class="string">". Poyo"</span>);
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>);<span class="comment">//Hello wordl!! 34. Poyo</span>
+    }
+}</pre>
+            </div>
 
             <h3>.length()</h3>
             <p>Esta función nos devuelve la longiud de la cadena de texto indicada enteriormente.</p>
         
-            
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">"Hello wordl!!"</span>;
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">length</span>());
+    }
+}</pre>
+            </div>
 
             <h3>.charAt(n) .indexOf(str)</h3>
-            <p>charAt(n), devuelve el caracter de la posición n. Debemos tener en cuenta que la primera posición es la 0 y que si no encuentra el caracter en el string devolvera -1.</p>
-            <p>indexOf(str), nos deveulve la posición de dicho str. Si buscas un str que no esta devolvera -1. También podemos indicar desde que cadena queremos que empiece a buscar.</p>
-            <p>lastIndexOf(str), es una variante de indexOf pero que devuelve la posición de la ultima aparicion de ese str.</p>
+            <p><strong>charAt(n)</strong>, devuelve el caracter de la posición n. Debemos tener en cuenta que la primera posición es la 0 y que si no encuentra el caracter en el string devolvera -1.</p>
+            <p><strong>indexOf(str)</strong>, nos deveulve la posición de dicho str. Si buscas un str que no esta devolvera -1. También podemos indicar desde que cadena queremos que empiece a buscar.</p>
+            <p><strong>lastIndexOf(str)</strong>, es una variante de indexOf pero que devuelve la posición de la ultima aparicion de ese str.</p>
     
-            
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">"Hello wordl!!"</span>;
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">charAt</span>(<span class="number">0</span>));
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">indexOf</span>(<span class="string">"H"</span>));
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">lastIndexOf</span>(<span class="string">"l"</span>));
+    }
+}</pre>
+            </div>
 
             <h3>.substring(n, m)</h3>
             <p>Devuelve una subcadena desde la primera posición indicada a la ultima, de n a m.</p>
             
-            
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">"Hello wordl!!"</span>;
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">substring</span>(<span class="number">5</span>, <span class="number">7</span>));
+    }
+}</pre>
+            </div>
 
             <h3>.equals(str)</h3>
             <p>Sirve para compara dos str, en Java no podemos comparar strings con ==, debemos hacerlo así. Devuelve un valor booleano.</p>
             <p>Existe una variante que es .equalsIgnoreCase(str) la cual funciona igual solo que no tiene en cuenta mayúsculas ni minúsculas.</p>
             
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">"Hello wordl"</span>;
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">equals</span>(<span class="string">"Hello wordl 1"</span>));
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">equalsIgnoreCase</span>(<span class="string">"hello Wordl"</span>));
+    }
+}</pre>
+            </div>
 
             <h3>.replaceAll(str1, str2)</h3>
             <p>Remplaza todos los primeros str indicados por los segundos. No modifica la str original, devuelve un str nuevo.</p>
             
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">"Hello wordl"</span>;
+        <span class="keyword">String</span> <span class="variable">texto2</span> = <span class="variable">texto</span>.<span class="function">replaceAll</span>(<span class="string">"!"</span>, <span class="string">"*"</span>);
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto2</span>);
+    }
+}</pre>
+            </div>
 
-            <h3>.replaceAll(str1, str2)</h3>
-            <p>Remplaza todos los primeros str indicados por los segundos. No modifica la str original, devuelve un str nuevo.</p>
+            <h3>.toLowerCase() .toUpperCase()</h3>
+            <p><strong>toLowerCase()</strong>, devuelve la cadena con todo minúsculas, una cadena nueva, no modifica el primer str. </p>
+            <p><strong>toUpperCase()</strong>, devuelve la cadena con todo mayúsculas, una cadena nueva, no modifica el primer str</p>
             
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">"Hello wordl"</span>;
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">toLowerCase</span>());
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">toUpperCase</span>());
+    }
+}</pre>
+            </div>
 
+            <h3>.trim()</h3>
+            <p>Elimina los espacios al principio y al final del str, ej: "  hola   " -> "hola". Muy util cuando leamos información del usuario por consola, ya que evita que se equivoque y escriba esacios al final sin querer.</p>
+            
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">"Hello wordl    "</span>;
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">trim</span>());
+    }
+}</pre>
+            </div>
+
+            <h3>.split(delimitador)</h3>
+            <p>Deveulve un array (lista) con los elemtos del string separados por el elememnto indicado.</p>
+            
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">"Hello wordl"</span>;
+        <span class="keyword">String</span> <span class="variable">palabras</span>[] = <span class="variable">texto</span>.<span class="function">split</span>(<span class="string">" "</span>);
+    }
+}</pre>
+            </div>
+
+            <h3>.contains(str) .startsWith(str) .endsWith(str)</h3>
+            <p><strong>contains(str)</strong> devuelven true o false segun si contiene el texto indicado.</p>
+            <p><strong>startsWith(str)</strong>, devuelven true o false segun si empieza por el texto indicado.</p>
+            <p><strong>endsWith(str)</strong>, devuelven true o false segun si termina por el texto indicado.</p>
+            
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">"Hello wordl!"</span>;
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">contains</span>(<span class="string">"Hello"</span>));
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">startsWith</span>(<span class="string">"H"</span>));
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">endsWith</span>(<span class="string">"!"</span>));
+    }
+}</pre>
+            </div>
+
+            <h3>.isEmpty()</h3>
+            <p>Devuelven true o false segun si la cadena esta vacia.</p>
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">""</span>;
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">texto</span>.<span class="function">isEmpty</span>());
+    }
+}</pre>
+            </div>
+
+            <h3>.toCharArray()</h3>
+            <p>Convierte un string en un array (lista) de caracteres.</p>
+            
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">texto</span> =  <span class="string">"Hello wordl"</span>;
+        <span class="keyword">char</span>[] <span class="variable">letras</span> = <span class="variable">texto</span>.<span class="function">toCharArray</span>();
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="variable">letras</span>);
+    }
+}</pre>
+            </div>
+
+            <h3>String.join(delimitador, lista)</h3>
+            <p>Une un array de Strings en uno solo juntando los elementos con el limitador entre estos.</p>
+
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> [] <span class="variable">palabras</span> = {<span class="string">"Hola"</span>, <span class="string">"planeta"</span>, <span class="string">"Tierra"</span>};
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="class">String</span>.<span class="function">join</span>(<span class="string">" "</span>, <span class="variable">palabras</span>));
+    }
+}</pre>
+            </div>
+
+            <h3>System.out.printf()</h3>
+            <p>Existe una manera de "formatear" cadenas de texto cuando las imprimimos por pantalla, es decir, indicar en un lugar de una cadena diferentes connotaciones de manera que posteriormente se indique un valor ahí.</p>
+            <p>Estas connotaciones van siempre detrás de %, entre otras son importantes:</p>
+            <ul>
+                <li><code>%n</code>: Para un salto de línea.</li>
+                <li><code>%b</code>: Para valores Booleanos.</li>
+                <li><code>%s</code>: Para string</li>
+                <li><code>%d</code>: Para double</li>
+                <li><code>%f</code>: Para floats.</li>
+                <li><code>%g</code>: Para números int, byte,short, long.</li>
+                <li><code>%t</code>: Para tiempo y fecha.</li>
+            </ul>
+
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        
+        <span class="keyword">int</span> <span class="variable">numero42</span> = <span class="number">42</span>;
+        <span class="keyword">String</span> <span class="variable">texto2</span> = <span class="string">"Hello, World!"</span>;
+        <span class="keyword">double</span> <span class="variable">decimal</span> = <span class="number">3.14159</span>;
+        
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">printf</span>(<span class="string">"The number is: %d%n"</span>, <span class="variable">numero42</span>);
+        
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">printf</span>(<span class="string">"The text is: %s%n"</span>, <span class="variable">texto2</span>);
+        
+        <span class="class">System</span>.<span class="variable">out</span>.<span class="function">printf</span>(<span class="string">"The value of pi is approximately: %.2f%n"</span>, <span class="variable">decimal</span>);
+    }
+}</pre>
+            </div>
+
+            <h3>Otras funcionalidades</h3>
+            <p>Para terminar vamos a ver unos trucos de las strings, unas secuencias que nos ayudan a indicar diferentes secuencias que no son lo que estamos poniendo, como un salto de línea, una tabulación y demás.</p>
+            
+            <div class="code-editor">
+<pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="keyword">String</span> <span class="variable">comillas</span> = <span class="string">"lo hizo \"pa\" nada "</span>;<span class="comment">//Permite comillas dentro de una str</span>
+        <span class="keyword">String</span> <span class="variable">barra</span> = <span class="string">"Sergio\\M"</span>; <span class="comment">//Realmente solo aparecera una barra</span>
+        <span class="keyword">String</span> <span class="variable">salto</span> = <span class="string">"\n"</span>;<span class="comment">//Salto de linea</span>
+        <span class="keyword">String</span> <span class="variable">tabulacion</span> = <span class="string">"\t"</span>;<span class="comment">//Tabulación</span>
+    }
+}</pre>
+            </div>
+
+
+            
 
         </section>
         <div class="lesson-navigation">

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de Java - CodeAcademy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#languages">Tutoriales</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>Java: Condiciones</h1>
+            <p>Controla las diferentes estructuras de control y condiciones de Java.</p>
+        </div>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Condicionales</h2>
+            <p>Como en todo lenguaje de programación tenemos condicionales, partes de codigo donde se hace una comprobación para seguir un camino u otro. Esto añade lógica y complejidad a nuestro código.</p>
+
+            <h3>If Else</h3>
+            <p>Con <code>if</code> junto a una condición podemos ejecutar o no una parte de código. Con <code>else</code> lo que haremos será ejecutar indicar que parte de código se ejecutara si la condición del <code>if</code> no se cumple. Además no no existe <code>elif</code> como en python por ejemplo. Para ello se utiliza else seguido de if (<code>else if (){}</code> ).</p>
+            <div class="code-editor">
+                <pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function">Main</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="function">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="string">"Hola Mundo!"</span>);
+    }
+}</pre>
+            </div>
+            <h3>Explicación Primer Programa </h3>
+            <p>Todo programa de Java tiene la misma estructura. Empieza con una clase <code>Main</code> y dentro de estra una función principal <code>main</code> también. Cuando ejecutamos un programa de Java el compilador llama a la clase <code>Main</code> y esta llama a su función principal (<code>main</code>) y entonces se ejecuta nuestro código.</p>
+            <div class="code-editor">
+                <pre><span class="keyword">public</span> <span class="keyword">class</span> <span class="function"><Main></Main></span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="keyword">String</span>[] <span class="variable">args</span>) {
+        <span class="function">System</span>.<span class="variable">out</span>.<span class="function">println</span>(<span class="string">"Hola Mundo!"</span>);
+    }
+}</pre>
+            </div>
+
+            <h3>Comentarios</h3>
+            <p>En Java como en todo lenguaje existen partes del código que no se ejecutan, que son simplemente indicaciones para nosotros mismos o para los otros programadores que esten utilizando nuestor código. Tenemos 2 tipos de comentarios, comentarios en una línea y comentarios en
+                //varias líneas. </p>
+            <!--<ul>
+                <li><code>int</code>: Números enteros.</li>
+                <li><code>double</code>: Números de punto flotante.</li>
+                <li><code>boolean</code>: Valores verdadero/falso.</li>
+                <li><code>String</code>: Cadenas de texto (es una clase, no un tipo primitivo).</li>
+            </ul>-->
+            <div class="code-editor">
+                <pre><span class="comment">//Esto es un comenmtario en una línea</span>
+<span class="comment">/*Esto es un 
+comentarios en varias
+líneas*/</span></pre>
+            </div>
+            
+        </section>
+        <div class="lesson-navigation">
+            <a href="java_tutorial_04.html" class="btn-primary"><i class="fas fa-arrow-left"></i> Lección Anterior</a>
+            <a href="java_lessons.html" class="btn-primary">Todas las Lecciones de Java</a>
+            <a href="java_tutorial_06.html" class="btn-primary">Siguiente Lección <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 CodeAcademy. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
